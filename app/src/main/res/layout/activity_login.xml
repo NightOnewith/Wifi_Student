@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/pic_index_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentTop="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="您的姓名："
+            android:textSize="24sp"
+            android:textColor="#ffffffff"
+            android:id="@+id/textView"
+            android:layout_marginTop="201dp"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/et_number"
+            android:layout_toStartOf="@+id/et_number" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="您的学号："
+            android:textSize="24sp"
+            android:textColor="#ffffffff"
+            android:id="@+id/textView2"
+            android:layout_marginTop="60dp"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="63dp"
+            android:layout_marginStart="63dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请输入您的名字"
+            android:layout_alignBaseline="@+id/textView"
+            android:layout_alignBottom="@+id/textView"
+            android:layout_toRightOf="@+id/textView"
+            android:layout_toEndOf="@+id/textView"
+            android:id="@+id/et_name" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请输入您的学号"
+            android:id="@+id/et_number"
+            android:layout_alignBottom="@+id/textView2"
+            android:layout_toRightOf="@+id/textView2"
+            android:layout_toEndOf="@+id/textView2" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="4dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="4dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout">
+
+        <Button
+            android:id="@+id/login_btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="42dip"
+            android:layout_marginRight="9dip"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bottombar"
+            android:gravity="center"
+            android:text="返   回"
+            android:textColor="@color/profile_bottom_text_color"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/login_btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="42dip"
+            android:layout_marginLeft="9dip"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bottombar"
+            android:gravity="center"
+            android:text="下一步"
+            android:textColor="@color/profile_bottom_text_color"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+</RelativeLayout>
