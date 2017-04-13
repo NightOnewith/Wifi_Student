@@ -8,7 +8,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.zijin.wifi_student.R;
-import com.zijin.wifi_student.fragment.NearbyFragment;
+import com.zijin.wifi_student.fragment.MessageFragment;
+import com.zijin.wifi_student.fragment.PersonFragment;
+import com.zijin.wifi_student.fragment.UserFragment;
 
 /**
  * Created by yin on 2017/4/12.
@@ -25,11 +27,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         bindView();
-        ly_user.performClick();
-        FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        NearbyFragment fg1 = new NearbyFragment();
-        transaction.add(R.id.fragment_container,fg1);
-        transaction.commit();
+
+        setSelected();
+        tv_user.setSelected(true);
+        UserFragment fg1 = new UserFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fg1).commit();
     }
 
     private void bindView() {
@@ -62,15 +64,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.ly_tab_menu_user:
                 setSelected();
                 tv_user.setSelected(true);
+
+                UserFragment fg1 = new UserFragment();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fg1).commit();
                 break;
             case R.id.ly_tab_menu_message:
                 setSelected();
                 tv_message.setSelected(true);
                 tv_message_num.setVisibility(View.INVISIBLE);
+
+                MessageFragment fg2 = new MessageFragment();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fg2).commit();
                 break;
             case R.id.ly_tab_menu_person:
                 setSelected();
                 tv_person.setSelected(true);
+
+                PersonFragment fg3 = new PersonFragment();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fg3).commit();
                 break;
         }
     }

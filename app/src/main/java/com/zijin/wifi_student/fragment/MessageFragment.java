@@ -1,8 +1,8 @@
 package com.zijin.wifi_student.fragment;
 
-import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,15 +12,15 @@ import android.widget.TextView;
 import com.zijin.wifi_student.R;
 
 /**
- * Created by yin on 2017/4/12.
+ * Created by yin on 2017/4/10.
  */
-public class NearbyFragment extends Fragment implements View.OnClickListener{
+public class MessageFragment extends Fragment implements View.OnClickListener{
     private Context mContext;
     private Button btn_one;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_nearby,container,false);
+        View view = inflater.inflate(R.layout.fragment_message,container,false);
         btn_one = (Button)view.findViewById(R.id.btn_one);
         btn_one.setOnClickListener(this);
         return view;
